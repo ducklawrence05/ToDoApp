@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|c:\\0lamviec\\elca_6months\\asp.net\\todoapp\\todoapp\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|c:\\0lamviec\\elca_6months\\asp.net\\todoapp\\todoapp\\migrations\\20250222041521_initdatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\migrations\\20250222041521_initdatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|c:\\0lamviec\\elca_6months\\asp.net\\todoapp\\todoapp\\domains\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\domains\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApplicationDBContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Migrations\\ApplicationDBContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ToDoApp\\Migrations\\ApplicationDBContextModelSnapshot.cs",
+              "ToolTip": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Migrations\\ApplicationDBContextModelSnapshot.cs",
+              "RelativeToolTip": "ToDoApp\\Migrations\\ApplicationDBContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T11:29:41.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250222041521_InitDatabase.Designer.cs",
+              "DocumentMoniker": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Migrations\\20250222041521_InitDatabase.Designer.cs",
+              "RelativeDocumentMoniker": "ToDoApp\\Migrations\\20250222041521_InitDatabase.Designer.cs",
+              "ToolTip": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Migrations\\20250222041521_InitDatabase.Designer.cs",
+              "RelativeToolTip": "ToDoApp\\Migrations\\20250222041521_InitDatabase.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T11:29:36.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ToDo.cs",
               "DocumentMoniker": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Domains\\Entities\\ToDo.cs",
               "RelativeDocumentMoniker": "ToDoApp\\Domains\\Entities\\ToDo.cs",

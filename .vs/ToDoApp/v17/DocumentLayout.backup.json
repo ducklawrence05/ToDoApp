@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|c:\\0lamviec\\elca_6months\\asp.net\\todoapp\\todoapp\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|c:\\0lamviec\\elca_6months\\asp.net\\todoapp\\todoapp\\infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|c:\\0lamviec\\elca_6months\\asp.net\\todoapp\\todoapp\\infrastructure\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\infrastructure\\iapplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|c:\\0lamviec\\elca_6months\\asp.net\\todoapp\\todoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|c:\\0lamviec\\elca_6months\\asp.net\\todoapp\\todoapp\\domains\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{660B4042-2AD6-402E-AEA0-74898210F18A}|ToDoApp\\ToDoApp.csproj|solutionrelative:todoapp\\domains\\entities\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,54 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Program.cs",
-              "RelativeDocumentMoniker": "ToDoApp\\Program.cs",
-              "ToolTip": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Program.cs",
-              "RelativeToolTip": "ToDoApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T04:57:14.039Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TodoController.cs",
-              "DocumentMoniker": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Controllers\\TodoController.cs",
-              "RelativeDocumentMoniker": "ToDoApp\\Controllers\\TodoController.cs",
-              "ToolTip": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Controllers\\TodoController.cs",
-              "RelativeToolTip": "ToDoApp\\Controllers\\TodoController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAxwEIAAAAJAAAAAAAAAA==",
+              "Title": "ToDo.cs",
+              "DocumentMoniker": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Domains\\Entities\\ToDo.cs",
+              "RelativeDocumentMoniker": "ToDoApp\\Domains\\Entities\\ToDo.cs",
+              "ToolTip": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Domains\\Entities\\ToDo.cs",
+              "RelativeToolTip": "ToDoApp\\Domains\\Entities\\ToDo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T04:27:46.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDBContext.cs",
-              "DocumentMoniker": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Infrastructure\\ApplicationDBContext.cs",
-              "RelativeDocumentMoniker": "ToDoApp\\Infrastructure\\ApplicationDBContext.cs",
-              "ToolTip": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Infrastructure\\ApplicationDBContext.cs",
-              "RelativeToolTip": "ToDoApp\\Infrastructure\\ApplicationDBContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T04:15:40.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IApplicationDBContext.cs",
-              "DocumentMoniker": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Infrastructure\\IApplicationDBContext.cs",
-              "RelativeDocumentMoniker": "ToDoApp\\Infrastructure\\IApplicationDBContext.cs",
-              "ToolTip": "C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\Infrastructure\\IApplicationDBContext.cs",
-              "RelativeToolTip": "ToDoApp\\Infrastructure\\IApplicationDBContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T04:51:09.957Z",
+              "WhenOpened": "2025-02-23T07:48:07.635Z",
               "EditorCaption": ""
             }
           ]
