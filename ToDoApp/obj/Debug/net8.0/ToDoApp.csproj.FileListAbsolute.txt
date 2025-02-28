@@ -170,4 +170,3 @@ C:\0LamViec\ELCA_6months\ASP.NET\ToDoApp\ToDoApp\bin\Debug\net8.0\runtimes\win\l
 C:\0LamViec\ELCA_6months\ASP.NET\ToDoApp\ToDoApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\0LamViec\ELCA_6months\ASP.NET\ToDoApp\ToDoApp\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\0LamViec\ELCA_6months\ASP.NET\ToDoApp\ToDoApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\0LamViec\ELCA_6months\ASP.NET\ToDoApp\ToDoApp\obj\Debug\net8.0\ToDoApp.sourcelink.json
