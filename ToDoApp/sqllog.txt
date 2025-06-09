@@ -1,0 +1,2454 @@
+SELECT [c].[Id], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT [c].[Id], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT [s].[Id], [s].[Name], [s].[Address]
+FROM [Schools] AS [s]
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+INSERT INTO [Courses] ([Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Schools] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Schools] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Schools] ([Address], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([CreatedAt], [Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([CreatedAt], [Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([CreatedAt], [Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[IsDeleted], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [Courses]
+OUTPUT 1
+WHERE [Id] = @p5;
+
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[IsDeleted], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+UPDATE [Courses] SET [CreatedAt] = @p5, [CreatedBy] = @p6, [DeletedAt] = @p7, [DeletedBy] = @p8, [IsDeleted] = @p9, [Name] = @p10, [StartDate] = @p11
+OUTPUT 1
+WHERE [Id] = @p12;
+
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+UPDATE [Courses] SET [CreatedAt] = @p5, [CreatedBy] = @p6, [DeletedAt] = @p7, [DeletedBy] = @p8, [Name] = @p9, [StartDate] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+UPDATE [Courses] SET [CreatedAt] = @p5, [CreatedBy] = @p6, [DeletedAt] = @p7, [DeletedBy] = @p8, [Name] = @p9, [StartDate] = @p10
+OUTPUT 1
+WHERE [Id] = @p11;
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_Name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([CreatedAt], [CreatedBy], [DeletedAt], [DeletedBy], [Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT [c].[Id], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT [c].[Id] AS [CourseId], [c].[Name] AS [CourseName], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Courses] AS [c]
+        WHERE [c].[Name] = @__course_CourseName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Courses] ([CreatedAt], [CreatedBy], [DeletedAt], [DeletedBy], [Name], [StartDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+UPDATE [Courses] SET [Name] = @p5, [StartDate] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+UPDATE [Courses] SET [Name] = @p5, [StartDate] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+UPDATE [Courses] SET [StartDate] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE [s0].[Id] = @__schoolId_Value_0
+SELECT [s0].[Id], [s0].[Address1], [s0].[Age], [s0].[Balance], [s0].[DateOfBirth], [s0].[FirstName], [s0].[Surname], [s0].[SId], [s1].[CourseId], [s1].[StudentId], [s1].[AssignmentScore], [s1].[FinalScore], [s1].[PracticalScore], [s1].[Id], [s1].[CreatedAt], [s1].[CreatedBy], [s1].[DeletedAt], [s1].[DeletedBy], [s1].[Name], [s1].[StartDate]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__id_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore], [c0].[Id], [c0].[CreatedAt], [c0].[CreatedBy], [c0].[DeletedAt], [c0].[DeletedBy], [c0].[Name], [c0].[StartDate]
+    FROM [CourseStudents] AS [c]
+    INNER JOIN [Courses] AS [c0] ON [c].[CourseId] = [c0].[Id]
+) AS [s1] ON [s0].[Id] = [s1].[StudentId]
+ORDER BY [s0].[Id], [s1].[CourseId], [s1].[StudentId]
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId], [s0].[Id], [s0].[Address], [s0].[Name], [s0].[UpdatedAt], [s0].[UpdatedBy]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE [s].[Id] = @__enrollment_StudentId_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CourseStudents] ([CourseId], [StudentId], [AssignmentScore], [FinalScore], [PracticalScore])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0
+SELECT [s0].[Id], [s0].[Address1], [s0].[Age], [s0].[Balance], [s0].[DateOfBirth], [s0].[FirstName], [s0].[Surname], [s0].[SId], [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+    FROM [Students] AS [s]
+    WHERE [s].[Id] = @__id_0
+) AS [s0]
+LEFT JOIN [CourseStudents] AS [c] ON [s0].[Id] = [c].[StudentId]
+ORDER BY [s0].[Id], [c].[CourseId]
+SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [c].[Name] AS [CourseName]
+FROM [QuestionBanks] AS [q]
+INNER JOIN [Courses] AS [c] ON [q].[CourseId] = [c].[Id]
+SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [c].[Name] AS [CourseName]
+FROM [QuestionBanks] AS [q]
+INNER JOIN [Courses] AS [c] ON [q].[CourseId] = [c].[Id]
+WHERE [q].[CourseId] = @__courseId_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[Id] = @__p_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [QuestionBanks]
+OUTPUT 1
+WHERE [Id] = @p5;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [c].[Name] AS [CourseName]
+FROM [QuestionBanks] AS [q]
+INNER JOIN [Courses] AS [c] ON [q].[CourseId] = [c].[Id]
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Exams] ([CourseId], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[Id] IN (
+    SELECT [n].[value]
+    FROM OPENJSON(@__newQuestionIds_0) WITH ([value] int '$') AS [n]
+) AND [q].[CourseId] = @__exam_CourseId_1
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [ExamQuestions] USING (
+VALUES (@p0, @p1, 0),
+(@p2, @p3, 1),
+(@p4, @p5, 2)) AS i ([ExamId], [QuestionBankId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([ExamId], [QuestionBankId])
+VALUES (i.[ExamId], i.[QuestionBankId])
+OUTPUT INSERTED.[Id], i._Position;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLog] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Exams] ([CourseId], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[Id] IN (
+    SELECT [n].[value]
+    FROM OPENJSON(@__newQuestionIds_0) WITH ([value] int '$') AS [n]
+) AND [q].[CourseId] = @__exam_CourseId_1
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ExamQuestions] ([ExamId], [QuestionBankId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[Id] IN (
+    SELECT [m].[value]
+    FROM OPENJSON(@__model_questionBankIds_0) WITH ([value] int '$') AS [m]
+) AND [q].[CourseId] = @__exam_CourseId_1
+SELECT [e].[Id], [e].[ExamId], [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p5;
+INSERT INTO [ExamQuestions] ([ExamId], [QuestionBankId])
+OUTPUT INSERTED.[Id]
+VALUES (@p6, @p7);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLog] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[Id] IN (
+    SELECT [n].[value]
+    FROM OPENJSON(@__newQuestionIds_0) WITH ([value] int '$') AS [n]
+) AND [q].[CourseId] = @__exam_CourseId_1
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [ExamQuestions] USING (
+VALUES (@p0, @p1, 0),
+(@p2, @p3, 1)) AS i ([ExamId], [QuestionBankId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([ExamId], [QuestionBankId])
+VALUES (i.[ExamId], i.[QuestionBankId])
+OUTPUT INSERTED.[Id], i._Position;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLog] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s]
+        WHERE [s].[Id] = @__model_StudentId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Exams] AS [e]
+        WHERE [e].[Id] = @__model_ExamId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s]
+        WHERE [s].[Id] = @__model_StudentId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Exams] AS [e]
+        WHERE [e].[Id] = @__model_ExamId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p5, @p6, @p7),
+(@p8, @p9, @p10);
+UPDATE [StudentExams] SET [Score] = @p11
+OUTPUT 1
+WHERE [Id] = @p12;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [CourseStudents] AS [c]
+        WHERE [c].[StudentId] = @__student_Id_0 AND [c].[CourseId] = @__exam_CourseId_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [CourseStudents] AS [c]
+        WHERE [c].[StudentId] = @__student_Id_0 AND [c].[CourseId] = @__exam_CourseId_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[Id] IN (
+    SELECT [n].[value]
+    FROM OPENJSON(@__newQuestionIds_0) WITH ([value] int '$') AS [n]
+) AND [q].[CourseId] = @__exam_CourseId_1
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ExamQuestions] ([ExamId], [QuestionBankId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+UPDATE [CourseStudents] SET [FinalScore] = @p10
+OUTPUT 1
+WHERE [CourseId] = @p11 AND [StudentId] = @p12;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p13, @p14, @p15),
+(@p16, @p17, @p18),
+(@p19, @p20, @p21),
+(@p22, @p23, @p24);
+UPDATE [StudentExams] SET [Score] = @p25
+OUTPUT 1
+WHERE [Id] = @p26;
+
+SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+UPDATE [CourseStudents] SET [FinalScore] = @p10
+OUTPUT 1
+WHERE [CourseId] = @p11 AND [StudentId] = @p12;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p13, @p14, @p15),
+(@p16, @p17, @p18),
+(@p19, @p20, @p21),
+(@p22, @p23, @p24),
+(@p25, @p26, @p27);
+UPDATE [StudentExams] SET [Score] = @p28
+OUTPUT 1
+WHERE [Id] = @p29;
+
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+UPDATE [CourseStudents] SET [FinalScore] = @p10
+OUTPUT 1
+WHERE [CourseId] = @p11 AND [StudentId] = @p12;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p13, @p14, @p15),
+(@p16, @p17, @p18),
+(@p19, @p20, @p21),
+(@p22, @p23, @p24);
+UPDATE [StudentExams] SET [Score] = @p25
+OUTPUT 1
+WHERE [Id] = @p26;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [CourseStudents] AS [c]
+        WHERE [c].[StudentId] = @__student_Id_0 AND [c].[CourseId] = @__exam_CourseId_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+UPDATE [CourseStudents] SET [FinalScore] = @p5
+OUTPUT 1
+WHERE [CourseId] = @p6 AND [StudentId] = @p7;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p8, @p9, @p10);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [CourseStudents] AS [c]
+        WHERE [c].[StudentId] = @__student_Id_0 AND [c].[CourseId] = @__exam_CourseId_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p0, @p1, @p2),
+(@p3, @p4, @p5);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT [s1].[Id], [s1].[CreatedAt], [s1].[ExamId], [s1].[Score], [s1].[StudentId], [s1].[Id0], [s1].[CourseId], [s1].[Title], [s2].[Id], [s2].[ExamId], [s2].[QuestionBankId], [s2].[Id0], [s2].[AnswerA], [s2].[AnswerB], [s2].[AnswerC], [s2].[AnswerD], [s2].[CorrectAnswer], [s2].[CourseId], [s2].[QuestionText], [s0].[StudentExamId], [s0].[ExamQuestionId], [s0].[SelectedAnswer]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s1]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s2] ON [s1].[Id0] = [s2].[ExamId]
+LEFT JOIN [StudentExamAnswers] AS [s0] ON [s1].[Id] = [s0].[StudentExamId]
+ORDER BY [s1].[Id], [s1].[Id0], [s2].[Id], [s2].[Id0], [s0].[StudentExamId]
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [CourseStudents] AS [c]
+        WHERE [c].[StudentId] = @__student_Id_0 AND [c].[CourseId] = @__exam_CourseId_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p0, @p1, @p2),
+(@p3, @p4, @p5);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId]
+FROM [QuestionBanks] AS [q]
+SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[CourseId] = @__courseId_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [QuestionBanks] ([AnswerA], [AnswerB], [AnswerC], [AnswerD], [CorrectAnswer], [CourseId], [QuestionText])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[CourseId] = @__courseId_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Exams] ([CourseId], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[CourseId] = @__exam_CourseId_0 AND [q].[Id] IN (
+    SELECT [n].[value]
+    FROM OPENJSON(@__newQuestionIds_1) WITH ([value] int '$') AS [n]
+)
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [ExamQuestions] USING (
+VALUES (@p0, @p1, 0),
+(@p2, @p3, 1),
+(@p4, @p5, 2),
+(@p6, @p7, 3)) AS i ([ExamId], [QuestionBankId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([ExamId], [QuestionBankId])
+VALUES (i.[ExamId], i.[QuestionBankId])
+OUTPUT INSERTED.[Id], i._Position;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT [e].[Id], [e].[ExamId], [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p20;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p21;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p22;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p23;
+MERGE [ExamQuestions] USING (
+VALUES (@p24, @p25, 0),
+(@p26, @p27, 1),
+(@p28, @p29, 2),
+(@p30, @p31, 3)) AS i ([ExamId], [QuestionBankId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([ExamId], [QuestionBankId])
+VALUES (i.[ExamId], i.[QuestionBankId])
+OUTPUT INSERTED.[Id], i._Position;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId]
+FROM [QuestionBanks] AS [q]
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[CourseId] = @__exam_CourseId_0 AND [q].[Id] IN (
+    SELECT [n].[value]
+    FROM OPENJSON(@__newQuestionIds_1) WITH ([value] int '$') AS [n]
+)
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[CourseId] = @__exam_CourseId_0 AND [q].[Id] IN (
+    SELECT [q0].[value]
+    FROM OPENJSON(@__questionBankIdSet_1) WITH ([value] int '$') AS [q0]
+)
+SELECT [e].[Id], [e].[ExamId], [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p20;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p21;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p22;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p23;
+MERGE [ExamQuestions] USING (
+VALUES (@p24, @p25, 0),
+(@p26, @p27, 1),
+(@p28, @p29, 2),
+(@p30, @p31, 3)) AS i ([ExamId], [QuestionBankId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([ExamId], [QuestionBankId])
+VALUES (i.[ExamId], i.[QuestionBankId])
+OUTPUT INSERTED.[Id], i._Position;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[CourseId] = @__exam_CourseId_0 AND [q].[Id] IN (
+    SELECT [q0].[value]
+    FROM OPENJSON(@__questionBankIdSet_1) WITH ([value] int '$') AS [q0]
+)
+SELECT [e].[Id], [e].[ExamId], [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p20;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p21;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p22;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p23;
+MERGE [ExamQuestions] USING (
+VALUES (@p24, @p25, 0),
+(@p26, @p27, 1),
+(@p28, @p29, 2),
+(@p30, @p31, 3)) AS i ([ExamId], [QuestionBankId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([ExamId], [QuestionBankId])
+VALUES (i.[ExamId], i.[QuestionBankId])
+OUTPUT INSERTED.[Id], i._Position;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT [e1].[Id], [e1].[Title], [e1].[CourseId], [s].[QuestionText], [s].[AnswerA], [s].[AnswerB], [s].[AnswerC], [s].[AnswerD], [s].[CorrectAnswer], [s].[Id], [s].[Id0]
+FROM (
+    SELECT TOP(1) [e].[Id], [e].[Title], [e].[CourseId]
+    FROM [Exams] AS [e]
+    WHERE [e].[Id] = @__examId_0
+) AS [e1]
+LEFT JOIN (
+    SELECT [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [e0].[Id], [q].[Id] AS [Id0], [e0].[ExamId]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s] ON [e1].[Id] = [s].[ExamId]
+ORDER BY [e1].[Id], [s].[Id]
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT [q].[Id], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+FROM [QuestionBanks] AS [q]
+WHERE [q].[CourseId] = @__exam_CourseId_0 AND [q].[Id] IN (
+    SELECT [q0].[value]
+    FROM OPENJSON(@__questionBankIdSet_1) WITH ([value] int '$') AS [q0]
+)
+SELECT [e].[Id], [e].[ExamId], [e].[QuestionBankId]
+FROM [ExamQuestions] AS [e]
+WHERE [e].[ExamId] = @__examId_0
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p20;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p21;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p22;
+DELETE FROM [ExamQuestions]
+OUTPUT 1
+WHERE [Id] = @p23;
+MERGE [ExamQuestions] USING (
+VALUES (@p24, @p25, 0),
+(@p26, @p27, 1),
+(@p28, @p29, 2),
+(@p30, @p31, 3)) AS i ([ExamId], [QuestionBankId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([ExamId], [QuestionBankId])
+VALUES (i.[ExamId], i.[QuestionBankId])
+OUTPUT INSERTED.[Id], i._Position;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT [e1].[Id], [e1].[Title], [e1].[CourseId], [s].[QuestionBankId], [s].[QuestionText], [s].[AnswerA], [s].[AnswerB], [s].[AnswerC], [s].[AnswerD], [s].[CorrectAnswer], [s].[Id]
+FROM (
+    SELECT TOP(1) [e].[Id], [e].[Title], [e].[CourseId]
+    FROM [Exams] AS [e]
+    WHERE [e].[Id] = @__examId_0
+) AS [e1]
+LEFT JOIN (
+    SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [e0].[Id], [e0].[ExamId]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s] ON [e1].[Id] = [s].[ExamId]
+ORDER BY [e1].[Id], [s].[Id]
+SELECT TOP(1) [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__p_0
+SELECT TOP(1) [e].[Id], [e].[CourseId], [e].[Title]
+FROM [Exams] AS [e]
+WHERE [e].[Id] = @__p_0
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [CourseStudents] AS [c]
+        WHERE [c].[StudentId] = @__student_Id_0 AND [c].[CourseId] = @__exam_CourseId_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExams] ([CreatedAt], [ExamId], [Score], [StudentId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [StudentExamAnswers] AS [s]
+        WHERE [s].[StudentExamId] = @__studentExamId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+UPDATE [CourseStudents] SET [FinalScore] = @p10
+OUTPUT 1
+WHERE [CourseId] = @p11 AND [StudentId] = @p12;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p13, @p14, @p15),
+(@p16, @p17, @p18),
+(@p19, @p20, @p21),
+(@p22, @p23, @p24);
+UPDATE [StudentExams] SET [Score] = @p25
+OUTPUT 1
+WHERE [Id] = @p26;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+
+SELECT [s1].[Id], [s1].[StudentId], [s1].[ExamId], [s1].[Score], [s1].[CreatedAt], [s2].[QuestionBankId], [s2].[QuestionText], [s2].[StudentExamId], [s2].[ExamQuestionId], [s2].[Id]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[StudentId], [s].[ExamId], [s].[Score], [s].[CreatedAt]
+    FROM [StudentExams] AS [s]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s1]
+LEFT JOIN (
+    SELECT [q].[Id] AS [QuestionBankId], [q].[QuestionText], [s0].[StudentExamId], [s0].[ExamQuestionId], [e].[Id]
+    FROM [StudentExamAnswers] AS [s0]
+    INNER JOIN [ExamQuestions] AS [e] ON [s0].[ExamQuestionId] = [e].[Id]
+    INNER JOIN [QuestionBanks] AS [q] ON [e].[QuestionBankId] = [q].[Id]
+) AS [s2] ON [s1].[Id] = [s2].[StudentExamId]
+ORDER BY [s1].[Id], [s2].[StudentExamId], [s2].[ExamQuestionId], [s2].[Id]
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [StudentExamAnswers] AS [s]
+        WHERE [s].[StudentExamId] = @__studentExamId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p0, @p1, @p2);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s0].[Id], [s0].[CreatedAt], [s0].[ExamId], [s0].[Score], [s0].[StudentId], [s0].[Id0], [s0].[CourseId], [s0].[Title], [s1].[Id], [s1].[ExamId], [s1].[QuestionBankId], [s1].[Id0], [s1].[AnswerA], [s1].[AnswerB], [s1].[AnswerC], [s1].[AnswerD], [s1].[CorrectAnswer], [s1].[CourseId], [s1].[QuestionText]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[CreatedAt], [s].[ExamId], [s].[Score], [s].[StudentId], [e].[Id] AS [Id0], [e].[CourseId], [e].[Title]
+    FROM [StudentExams] AS [s]
+    INNER JOIN [Exams] AS [e] ON [s].[ExamId] = [e].[Id]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s0]
+LEFT JOIN (
+    SELECT [e0].[Id], [e0].[ExamId], [e0].[QuestionBankId], [q].[Id] AS [Id0], [q].[AnswerA], [q].[AnswerB], [q].[AnswerC], [q].[AnswerD], [q].[CorrectAnswer], [q].[CourseId], [q].[QuestionText]
+    FROM [ExamQuestions] AS [e0]
+    INNER JOIN [QuestionBanks] AS [q] ON [e0].[QuestionBankId] = [q].[Id]
+) AS [s1] ON [s0].[Id0] = [s1].[ExamId]
+ORDER BY [s0].[Id], [s0].[Id0], [s1].[Id]
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [StudentExamAnswers] AS [s]
+        WHERE [s].[StudentExamId] = @__studentExamId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [StudentExamAnswers] AS [s]
+        WHERE [s].[StudentExamId] = @__studentExamId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT TOP(1) [c].[CourseId], [c].[StudentId], [c].[AssignmentScore], [c].[FinalScore], [c].[PracticalScore]
+FROM [CourseStudents] AS [c]
+WHERE [c].[StudentId] = @__studentExam_StudentId_0 AND [c].[CourseId] = @__studentExam_Exam_CourseId_1
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [StudentExamAnswers] ([ExamQuestionId], [StudentExamId], [SelectedAnswer])
+VALUES (@p0, @p1, @p2);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s1].[Id], [s1].[StudentId], [s1].[ExamId], [s1].[Score], [s1].[CreatedAt], [s2].[ExamQuestionId], [s2].[QuestionBankId], [s2].[QuestionText], [s2].[SelectedAnswer], [s2].[StudentExamId], [s2].[Id], [s2].[Id0]
+FROM (
+    SELECT TOP(1) [s].[Id], [s].[StudentId], [s].[ExamId], [s].[Score], [s].[CreatedAt]
+    FROM [StudentExams] AS [s]
+    WHERE [s].[Id] = @__studentExamId_0
+) AS [s1]
+LEFT JOIN (
+    SELECT [s0].[ExamQuestionId], [e].[QuestionBankId], [q].[QuestionText], [s0].[SelectedAnswer], [s0].[StudentExamId], [e].[Id], [q].[Id] AS [Id0]
+    FROM [StudentExamAnswers] AS [s0]
+    INNER JOIN [ExamQuestions] AS [e] ON [s0].[ExamQuestionId] = [e].[Id]
+    INNER JOIN [QuestionBanks] AS [q] ON [e].[QuestionBankId] = [q].[Id]
+) AS [s2] ON [s1].[Id] = [s2].[StudentExamId]
+ORDER BY [s1].[Id], [s2].[StudentExamId], [s2].[ExamQuestionId], [s2].[Id]
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+ORDER BY [s].[Id] DESC
+SELECT [s1].[Id], COALESCE([s1].[FirstName], N'') + N' ' + COALESCE([s1].[Surname], N'') AS [FullName], [s1].[Age], [s0].[Name] AS [SchoolName]
+FROM (
+    SELECT [s].[Id], [s].[Age], [s].[FirstName], [s].[Surname], [s].[SId]
+    FROM [Students] AS [s]
+    ORDER BY [s].[Id] DESC
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [s1]
+INNER JOIN [Schools] AS [s0] ON [s1].[SId] = [s0].[Id]
+ORDER BY [s1].[Id] DESC
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE [s].[FirstName] LIKE N'%a%'
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE [s].[Surname] LIKE N'%a%'
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE LOWER(CONVERT(varchar(11), [s].[Id])) LIKE '%2%'
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE LOWER(CONVERT(varchar(11), [s].[SId])) LIKE '%1%'
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT [c].[StudentId] AS [Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [CourseStudents] AS [c]
+INNER JOIN [Students] AS [s] ON [c].[StudentId] = [s].[Id]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE [c].[CourseId] = @__id_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT [c].[StudentId] AS [Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [CourseStudents] AS [c]
+INNER JOIN [Students] AS [s] ON [c].[StudentId] = [s].[Id]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE [c].[CourseId] = @__id_0
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE LOWER(CONVERT(varchar(11), [s].[SId])) LIKE '%2%'
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+ORDER BY [s].[Age]
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT [c].[Id] AS [CourseId], [c].[Name] AS [CourseName], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT [c].[Id] AS [CourseId], [c].[Name] AS [CourseName], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT [c].[Id] AS [CourseId], [c].[Name] AS [CourseName], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT [c].[StudentId] AS [Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [CourseStudents] AS [c]
+INNER JOIN [Students] AS [s] ON [c].[StudentId] = [s].[Id]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+WHERE [c].[CourseId] = @__id_0
+SELECT [c].[Id] AS [CourseId], [c].[Name] AS [CourseName], [c].[StartDate]
+FROM [Courses] AS [c]
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT TOP(1) [c].[Id], [c].[CreatedAt], [c].[CreatedBy], [c].[DeletedAt], [c].[DeletedBy], [c].[Name], [c].[StartDate]
+FROM [Courses] AS [c]
+WHERE [c].[Id] = @__p_0
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+SELECT [s].[Id], [s].[Name], [s].[Address]
+FROM [Schools] AS [s]
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s]
+        WHERE [s].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Students] ([Id], [Address1], [Balance], [DateOfBirth], [FirstName], [Surname], [SId])
+OUTPUT INSERTED.[Age]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s].[Id], COALESCE([s].[FirstName], N'') + N' ' + COALESCE([s].[Surname], N'') AS [FullName], [s].[Age], [s0].[Name] AS [SchoolName]
+FROM [Students] AS [s]
+INNER JOIN [Schools] AS [s0] ON [s].[SId] = [s0].[Id]
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Students] AS [s]
+        WHERE [s].[Id] = @__id_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__user_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__user_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__user_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__user_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__user_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__user_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[EmailAddress] = @__user_EmailAddress_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE ([u].[UserName] = @__user_UserNameOrEmail_0 OR [u].[EmailAddress] = @__user_UserNameOrEmail_0) AND [u].[Password] = @__user_Password_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__registerModel_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[EmailAddress] = @__registerModel_EmailAddress_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [Salting], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [Salting], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s].[Id], [s].[Name], [s].[Address]
+FROM [Schools] AS [s]
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__registerModel_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[EmailAddress] = @__registerModel_EmailAddress_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [Salting], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+FROM [Students] AS [s]
+WHERE [s].[SId] = @__p_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[UserName] = @__registerModel_UserName_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[EmailAddress] = @__registerModel_EmailAddress_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [Salting], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [s].[Id], [s].[Address1], [s].[Age], [s].[Balance], [s].[DateOfBirth], [s].[FirstName], [s].[Surname], [s].[SId]
+FROM [Students] AS [s]
+WHERE [s].[SId] = @__p_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [s].[Id], [s].[Name], [s].[Address]
+FROM [Schools] AS [s]
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [s].[Id], [s].[Name], [s].[Address]
+FROM [Schools] AS [s]
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[EmailAddress] = @__payload_Email_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [Salting], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[EmailAddress] = @__payload_Email_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [Salting], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[EmailAddress] = @__payload_Email_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([EmailAddress], [FirstName], [LastName], [Password], [Role], [Salting], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [RefreshToken] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[Token] = @__refreshToken_0 AND [r].[IsRevoked] = CAST(0 AS bit) AND [r].[ExpireTime] > GETDATE()
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [RefreshToken] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[Token] = @__refreshToken_0 AND [r].[IsRevoked] = CAST(0 AS bit) AND [r].[ExpireTime] > GETDATE()
+SELECT TOP(1) [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[Token] = @__refreshToken_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p5;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [RefreshToken] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[Id]
+WHERE [r].[Token] = @__refreshToken_0 AND [r].[IsRevoked] = CAST(0 AS bit) AND [r].[ExpireTime] > GETDATE()
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[UserId] = @__userId_0
+SET NOCOUNT ON;
+MERGE [AuditLogs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3),
+(@p20, @p21, @p22, @p23, @p24, 4),
+(@p25, @p26, @p27, @p28, @p29, 5),
+(@p30, @p31, @p32, @p33, @p34, 6),
+(@p35, @p36, @p37, @p38, @p39, 7)) AS i ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+VALUES (i.[Action], i.[CreatedAt], i.[EntityName], i.[NewValue], i.[OldValue])
+OUTPUT INSERTED.[Id], i._Position;
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p40;
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p41;
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p42;
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p43;
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p44;
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p45;
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p46;
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p47;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[UserId] = @__userId_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p5;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[UserId] = @__userId_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p5;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[UserId] = @__userId_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[UserId] = @__userId_0
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[UserId] = @__userId_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p5;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[UserId] = @__userId_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p5;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT [s].[Id], [s].[Name], [s].[Address]
+FROM [Schools] AS [s]
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__loginModel_UserNameOrEmail_0 OR [u].[EmailAddress] = @__loginModel_UserNameOrEmail_0
+SELECT [r].[Id], [r].[ExpireTime], [r].[IsRevoked], [r].[Token], [r].[UserId]
+FROM [RefreshToken] AS [r]
+WHERE [r].[UserId] = @__userId_0
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+DELETE FROM [RefreshToken]
+OUTPUT 1
+WHERE [Id] = @p5;
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [RefreshToken] ([ExpireTime], [IsRevoked], [Token], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedAt], [EntityName], [NewValue], [OldValue])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+
+SELECT TOP(1) [u].[Id], [u].[EmailAddress], [u].[FirstName], [u].[LastName], [u].[Password], [u].[Role], [u].[Salting], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[EmailAddress] = @__payload_Email_0
