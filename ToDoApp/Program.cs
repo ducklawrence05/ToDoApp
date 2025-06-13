@@ -14,6 +14,9 @@ using Microsoft.IdentityModel.Tokens;
 using ToDoApp.Domains.AppSettingsConfigurations;
 using Microsoft.OpenApi.Models;
 using ToDoApp.Infrastructures.Extentions;
+using OfficeOpenXml;
+using Hangfire;
+using ToDoApp.Application.BackgroundJobs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -76,10 +79,13 @@ builder.Services.AddSession(options =>
 });
 
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
-var googleAuthSettings = builder.Configuration.GetSection("GoogleAuthentication");
-
 builder.Services.Configure<JwtSettings>(jwtSettings);
+
+var googleAuthSettings = builder.Configuration.GetSection("GoogleAuthentication");
 builder.Services.Configure<GoogleAuthSettings>(googleAuthSettings);
+
+var fileInformation = builder.Configuration.GetSection("FileInformation");
+builder.Services.Configure<FileInformation>(fileInformation);
 
 builder.Services
     .AddAuthentication(options =>
@@ -148,6 +154,11 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
+ExcelPackage.License.SetNonCommercialPersonal("Duck");
+
+builder.Services.AddHangfire(x => x.UseSqlServerStorage("Server=MSI\\SQLEXPRESS;Database=ToDo;Trusted_Connection=True;TrustServerCertificate=True"));
+builder.Services.AddHangfireServer();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -196,5 +207,10 @@ app.Use(async (context, next) =>
 
 app.UseMiddleware<LogMiddleware>();
 app.UseMiddleware<RateLimitMiddleware>();
+
+app.UseHangfireDashboard();
+
+RecurringJob.AddOrUpdate<GenerateSchoolReportJob>("RecurringJob",
+    job => job.ExecuteAsync(), Cron.Minutely);
 
 app.Run();

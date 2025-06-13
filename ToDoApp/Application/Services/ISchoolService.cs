@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 using ToDoApp.Application.Dtos.SchoolModel;
 using ToDoApp.Application.Dtos.StudentModel;
 using ToDoApp.Domains.Entities;
@@ -17,6 +19,8 @@ namespace ToDoApp.Application.Services
         int PutSchool(SchoolUpdateModel school);
 
         void DeleteSchool(int schoolId);
+
+        Task<ImportResult> ImportSchools(IFormFile file);
     }
 
     public class SchoolService : ISchoolService
@@ -126,6 +130,70 @@ namespace ToDoApp.Application.Services
 
             _context.Schools.Remove(data);
             _context.SaveChanges();
+        }
+
+        public async Task<ImportResult> ImportSchools(IFormFile file)
+        {
+            using var excelFile = new ExcelPackage(file.OpenReadStream());
+            var workSheet = excelFile.Workbook.Worksheets.FirstOrDefault();
+
+            if (workSheet == null)
+            {
+                return new ImportResult
+                {
+                    IsSuccess = false,
+                    Message = "No worksheet found in the provided Excel file."
+                };
+            }
+
+            // Validate
+            // row, col: error msg
+            // Example: row 1, col 1, schoolId does not exist
+
+            // Update when sId not empty
+            // Create new when sId empty
+
+            string message = "Successfully";
+            var rowCount = workSheet.Dimension.Rows;
+            var schools = _context.Schools.ToList();
+
+            for (int i = 2; i <= rowCount; i++)
+            {
+                var idRaw = workSheet.Cells[i, 1].Text.Trim();
+                var schoolName = workSheet.Cells[i, 2].Text.Trim();
+                var schoolAdress = workSheet.Cells[i, 3].Text.Trim();
+
+                if (int.TryParse(idRaw, out var id))
+                {
+                    var school = schools.FirstOrDefault(x => x.Id == id);
+                    if (school == null)
+                    {
+                        return new ImportResult
+                        {
+                            IsSuccess = false,
+                            Message = $"row {i}, cell {1}: schoolId does not exist"
+                        };
+                    }
+
+                    school.Name = schoolName;
+                    school.Address = schoolAdress;
+                }
+                else
+                {
+                    _context.Schools.Add(new School
+                    {
+                        Name = schoolName,
+                        Address = schoolAdress
+                    });
+                }
+            }
+
+            _context.SaveChangesAsync();
+            return new ImportResult
+            {
+                IsSuccess = true,
+                Message = message
+            };
         }
     }
 }
