@@ -30,8 +30,8 @@ namespace ToDoApp.Infrastructures
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder
-                .UseSqlServer("Server=MSI\\SQLEXPRESS;Database=ToDo;Trusted_Connection=True;TrustServerCertificate=True");
+            //optionsBuilder
+            //    .UseSqlServer("Server=MSI\\SQLEXPRESS;Database=ToDo;Trusted_Connection=True;TrustServerCertificate=True");
             //optionsBuilder.UseLazyLoadingProxies();
             optionsBuilder.AddInterceptors(
                 new SqlQueryLoggingInterceptor(), 

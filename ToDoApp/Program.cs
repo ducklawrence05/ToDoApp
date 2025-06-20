@@ -17,6 +17,7 @@ using ToDoApp.Infrastructures.Extentions;
 using OfficeOpenXml;
 using Hangfire;
 using ToDoApp.Application.BackgroundJobs;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -109,6 +110,12 @@ builder.Services
         };
     });
 
+string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<IApplicationDBContext, ApplicationDBContext>(options =>
+{
+    options.UseSqlServer(connectionString);
+});
+
 //builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 //    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
 //    {
@@ -148,7 +155,7 @@ builder.Services.AddAutoMapper(typeof(TodoProfile));
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Warning()
-    .WriteTo.File("C:\\0LamViec\\ELCA_6months\\ASP.NET\\Logs\\log.txt", 
+    .WriteTo.File(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs\\log.txt"), 
         rollingInterval: RollingInterval.Minute)
     .CreateLogger();
 
@@ -156,7 +163,7 @@ builder.Host.UseSerilog();
 
 ExcelPackage.License.SetNonCommercialPersonal("Duck");
 
-builder.Services.AddHangfire(x => x.UseSqlServerStorage("Server=MSI\\SQLEXPRESS;Database=ToDo;Trusted_Connection=True;TrustServerCertificate=True"));
+builder.Services.AddHangfire(x => x.UseSqlServerStorage(connectionString));
 builder.Services.AddHangfireServer();
 
 var app = builder.Build();

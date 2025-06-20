@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using ToDoApp.Constant;
+﻿using ToDoApp.Constant;
 
 namespace ToDoApp.Domains.Entities
 {

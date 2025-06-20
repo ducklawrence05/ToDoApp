@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
+﻿using System.Linq.Expressions;
 
 namespace ToDoApp.Application.Extentions
 {

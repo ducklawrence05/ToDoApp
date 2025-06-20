@@ -11,6 +11,9 @@ namespace ToDoApp.Infrastructures.Interceptors
         public override InterceptionResult<DbDataReader> ReaderExecuting(DbCommand command, CommandEventData eventData, InterceptionResult<DbDataReader> result)
         {
             stopwatch.Start();
+
+            using StreamWriter writer = new StreamWriter(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sqllog.txt"));
+
             return base.ReaderExecuting(command, eventData, result);
         }
 
@@ -20,7 +23,7 @@ namespace ToDoApp.Infrastructures.Interceptors
             var miliseconds = stopwatch.ElapsedMilliseconds;
             if (miliseconds >= 10)
             {
-                using StreamWriter writer = new StreamWriter("C:\\0LamViec\\ELCA_6months\\ASP.NET\\ToDoApp\\ToDoApp\\sqllog.txt", append: true);
+                using StreamWriter writer = new StreamWriter(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sqllog.txt"), append: true);
                 writer.WriteLine(command.CommandText);
             }
             return base.ReaderExecuted(command, eventData, result);

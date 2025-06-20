@@ -17,8 +17,8 @@
 
         public Guid Generate()
         {
-            var guidGenerator = _serviceProvider.GetService<IGuidGenerator>();
-            return guidGenerator.Generate();
+            var guidGenerator = Guid.NewGuid();
+            return guidGenerator;
         }
     }
 }
