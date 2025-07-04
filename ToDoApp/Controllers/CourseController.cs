@@ -12,53 +12,34 @@ namespace ToDoApp.Controllers
     public class CourseController : ControllerBase
     {
         private readonly ICourseService _courseService;
-        private readonly ILogger<CourseController> _logger;
-
-        public CourseController(ICourseService courseService, ILogger<CourseController> logger)
+        
+        public CourseController(ICourseService courseService)
         {
             _courseService = courseService;
-            _logger = logger;
-        }
-
-        [TypeFilter(typeof(CacheFilter), Arguments = [5])]
-        [HttpGet("{id}")]
-        public CourseStudentViewModel GetCourseDetail(int id)
-        {
-            _logger.LogInformation("Get Course id: " + id);
-            if(id == 10)
-            {
-                _logger.LogWarning("Warning: " + id);
-            }
-            if(id <= 0)
-            {
-                _logger.LogError("Id can't be less than or equal to 0");
-                throw new Exception("Course id can't be less than or equal to 0");
-            }
-            return _courseService.GetCourseDetail(id);
         }
 
         [HttpGet]
-        public IEnumerable<CourseViewModel> GetCourse()
+        public async Task<IActionResult> GetCourse()
         {
-            return _courseService.GetCourses();
+            return Ok(await _courseService.GetCourses());
         }
 
         [HttpPost]
-        public async Task<CourseViewModel> PostCourse(CourseCreateModel course)
+        public async Task<int> PostCourse(CourseCreateModel course)
         {
             return await _courseService.PostCourse(course);
         }
 
         [HttpPut]
-        public CourseViewModel PutCourse(CourseUpdateModel course)
+        public async Task<int> PutCourse(CourseUpdateModel course)
         {
-            return _courseService.PutCourse(course);
+            return await _courseService.PutCourse(course);
         }
 
         [HttpDelete]
-        public void DeleteCourse(int courseId)
+        public async Task<int> DeleteCourse(int courseId)
         {
-            _courseService.DeleteCourse(courseId);
+            return await _courseService.DeleteCourse(courseId);
         }
     }
 }

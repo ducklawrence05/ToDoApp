@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using ToDoApp.Application.Dtos.CourseModel;
 using ToDoApp.Application.Dtos.StudentModel;
 using ToDoApp.Application.Extentions;
+using ToDoApp.DataAccess.Repositories;
 using ToDoApp.Domains.Entities;
 using ToDoApp.Infrastructures;
 
@@ -24,7 +25,7 @@ namespace ToDoApp.Application.Services
             int pageIndex, int pageSize
         );
 
-        IEnumerable<StudentViewModel> GetStudents();
+        Task<IEnumerable<StudentViewModel>> GetStudentsAsync();
 
         int PostStudent(StudentCreateModel student);
 
@@ -39,12 +40,15 @@ namespace ToDoApp.Application.Services
         private readonly IApplicationDBContext _context;
         private readonly IMapper _mapper;
         private readonly IMemoryCache _cache;
+        private readonly IStudentRepository _studentRepository;
 
-        public StudentService(IApplicationDBContext context, IMapper mapper, IMemoryCache cache)
+        public StudentService(IApplicationDBContext context, 
+            IMapper mapper, IMemoryCache cache, IStudentRepository studentRepository)
         {
             _context = context;
             _mapper = mapper;
             _cache = cache;
+            _studentRepository = studentRepository;
         }
 
         public StudentCourseViewModel GetStudentDetail(int id)
@@ -120,7 +124,7 @@ namespace ToDoApp.Application.Services
             return result;
         }
 
-        public IEnumerable<StudentViewModel> GetStudents()
+        public async Task<IEnumerable<StudentViewModel>> GetStudentsAsync()
         {
             //var data = _cache.Get<IEnumerable<StudentViewModel>>(STUDENT_KEY);
 
@@ -134,23 +138,19 @@ namespace ToDoApp.Application.Services
             //    _cache.Set(STUDENT_KEY, data, cacheOption);
             //}
 
-            var data = _cache.GetOrCreate(STUDENT_KEY, entry =>
+            var data = await _cache.GetOrCreate(STUDENT_KEY, async entry =>
             {
                 entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30);
-                return GetAllStudents();
+                return await GetAllStudentsAsync();
             });
 
             return data;
         }
 
-        private IEnumerable<StudentViewModel> GetAllStudents()
+        private async Task<IEnumerable<StudentViewModel>> GetAllStudentsAsync()
         {
-            var query = _context.Students
-                .Include(student => student.School)
-                .AsQueryable();
-
-            var result = _mapper.ProjectTo<StudentViewModel>(query).ToList();
-
+            var student = await _studentRepository.GetStudentsAsync(s => s.School);
+            var result = _mapper.Map<List<StudentViewModel>>(student);
             return result;
         }
 

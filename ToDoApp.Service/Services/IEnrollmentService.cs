@@ -11,6 +11,7 @@ namespace ToDoApp.Application.Services
 {
     public interface IEnrollmentService
     {
+        CourseStudentViewModel GetCourseDetail(int id);
         EnrollmentViewModel PostEnrollment(EnrollmentCreateModel enrollment);
         EnrollmentViewModel PutEnrollment(EnrollmentCreateModel enrollment);
     }
@@ -22,6 +23,30 @@ namespace ToDoApp.Application.Services
         public EnrollmentService(IApplicationDBContext context)
         {
             _context = context;
+        }
+
+        public CourseStudentViewModel GetCourseDetail(int id)
+        {
+            var course = _context.Courses.Find(id);
+            if (course == null) return null;
+
+            var students = _context.CourseStudents
+                .Where(x => x.CourseId == id)
+                .Select(x => new StudentViewModel
+                {
+                    Id = x.StudentId,
+                    FullName = x.Student.FirstName + " " + x.Student.LastName,
+                    Age = x.Student.Age,
+                    SchoolName = x.Student.School.Name
+                });
+
+            return new CourseStudentViewModel
+            {
+                CourseId = course.Id,
+                CourseName = course.Name,
+                StartDate = course.StartDate,
+                Students = students.ToList()
+            };
         }
 
         public EnrollmentViewModel PostEnrollment(EnrollmentCreateModel enrollment)

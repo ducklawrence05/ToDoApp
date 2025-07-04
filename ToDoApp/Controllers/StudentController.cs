@@ -38,8 +38,8 @@ namespace ToDoApp.Controllers
         //}
 
         [HttpGet]
-        public IEnumerable<StudentViewModel> GetStudents(){
-            return _studentService.GetStudents();
+        public async Task<IEnumerable<StudentViewModel>> GetStudents(){
+            return await _studentService.GetStudentsAsync();
         }
 
         [HttpPost]

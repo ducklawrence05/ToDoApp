@@ -3,6 +3,7 @@ using ToDoApp.Application.Middlewares;
 using ToDoApp.Application.Services.CacheService;
 using ToDoApp.Application.Services;
 using ToDoApp.Application.Services.GoogleCredentialService;
+using ToDoApp.DataAccess.Repositories;
 
 namespace ToDoApp.Infrastructures.Extentions
 {
@@ -10,6 +11,9 @@ namespace ToDoApp.Infrastructures.Extentions
     {
         public static void AddServices(this IServiceCollection serviceCollection)
         {
+            serviceCollection.AddScoped<ICourseRepository, CourseRepository>();
+            serviceCollection.AddScoped<IStudentRepository, StudentRepository>();
+
             serviceCollection.AddScoped<IToDoService, ToDoService>();
             serviceCollection.AddTransient<IGuidGenerator, GuidGenerator>();
             serviceCollection.AddTransient<GuidData>();

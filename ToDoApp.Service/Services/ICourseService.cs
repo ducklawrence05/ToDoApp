@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using ToDoApp.Application.Dtos;
 using ToDoApp.Application.Dtos.CourseModel;
 using ToDoApp.Application.Dtos.StudentModel;
+using ToDoApp.DataAccess.Repositories;
 using ToDoApp.Domains.Entities;
 using ToDoApp.Infrastructures;
 
@@ -11,51 +12,29 @@ namespace ToDoApp.Application.Services
 {
     public interface ICourseService
     {
-        CourseStudentViewModel GetCourseDetail(int id);
-        IEnumerable<CourseViewModel> GetCourses();
-        Task<CourseViewModel> PostCourse(CourseCreateModel course);
-        CourseViewModel PutCourse(CourseUpdateModel course);
-        void DeleteCourse(int id);
+        Task<IEnumerable<CourseViewModel>> GetCourses();
+        Task<int> PostCourse(CourseCreateModel course);
+        Task<int> PutCourse(CourseUpdateModel course);
+        Task<int> DeleteCourse(int id);
     }
 
     public class CourseService : ICourseService
     {
         private readonly IApplicationDBContext _context;
         private readonly IMapper _mapper;
+        private readonly ICourseRepository _courseRepository;
 
-        public CourseService(IApplicationDBContext context, IMapper mapper)
+        public CourseService(IApplicationDBContext context, IMapper mapper,
+            ICourseRepository courseRepository)
         {
             _context = context;
             _mapper = mapper;
+            _courseRepository = courseRepository;
         }
 
-        public CourseStudentViewModel GetCourseDetail(int id)
+        public async Task<IEnumerable<CourseViewModel>> GetCourses()
         {
-            var course = _context.Courses.Find(id);
-            if (course == null) return null;
-
-            var students = _context.CourseStudents
-                .Where(x => x.CourseId == id)
-                .Select(x => new StudentViewModel
-                {
-                    Id = x.StudentId,
-                    FullName = x.Student.FirstName + " " + x.Student.LastName,
-                    Age = x.Student.Age,
-                    SchoolName = x.Student.School.Name
-                });
-
-            return new CourseStudentViewModel
-            {
-                CourseId = course.Id,
-                CourseName = course.Name,
-                StartDate = course.StartDate,
-                Students = students.ToList()
-            };
-        }
-
-        public IEnumerable<CourseViewModel> GetCourses()
-        {
-            var query = _context.Courses.AsQueryable();
+            var courses = await _courseRepository.GetCoursesAsync();
 
             //cach 1
             //var courses = query.ToList();
@@ -65,30 +44,36 @@ namespace ToDoApp.Application.Services
             //var result = _mapper.Map<List<CourseViewModel>>(courses);
 
             //cach 2
-            var result = _mapper.ProjectTo<CourseViewModel>(query).ToList();
-
-            return result;
+            return _mapper.Map<List<CourseViewModel>>(courses);
         }
 
-        public async Task<CourseViewModel> PostCourse(CourseCreateModel course)
+        public async Task<int> PostCourse(CourseCreateModel course)
         {
-            if(course == null || await _context.Courses.AnyAsync(x => x.Name == course.CourseName))
+            if(course == null || await _courseRepository.GetCourseByNameAsync(course.CourseName) != null)
             {
-                return null;
+                return -1;
             }
 
             var newCourse = _mapper.Map<Course>(course);
 
-            _context.Courses.Add(newCourse);
-            await _context.SaveChangesAsync();
-
-            return _mapper.Map<CourseViewModel>(newCourse);
+            return await _courseRepository.AddAsync(newCourse);
         }
 
-        public CourseViewModel PutCourse(CourseUpdateModel course)
+        public async Task<int> PutCourse(CourseUpdateModel course)
         {
-            var data = _context.Courses.Find(course.CourseId);
-            if (data == null) return null;
+            var data = await _courseRepository.GetCourseByIdAsync(course.CourseId);
+            
+            if (data == null || data.DeletedBy.HasValue)
+            {
+                throw new InvalidOperationException("Course not found or has been deleted.");
+            }
+
+            var dupCourseName = await _courseRepository.GetCourseByNameAsync(data.Name);
+
+            if (dupCourseName != null)
+            {
+                throw new Exception("Couse name is duplicated");
+            }
 
             //if(!string.IsNullOrWhiteSpace(course.CourseName)) data.Name = course.CourseName;
             //if(course.StartDate.HasValue) data.StartDate = course.StartDate.Value;
@@ -96,16 +81,13 @@ namespace ToDoApp.Application.Services
             _mapper.Map(course, data); // map từ src (course) về dest (data), ko tạo mới
                                        //   còn cái .Map<>() là tạo mới
 
-            _context.SaveChanges();
-            return _mapper.Map<CourseViewModel>(data);
+            await _courseRepository.UpdateAsync(data);
+            return data.Id;
         }
 
-        public void DeleteCourse(int id)
+        public async Task<int> DeleteCourse(int id)
         {
-            var data = _context.Courses.Find(id);
-            if (data == null) return;
-            _context.Courses.Remove(data);
-            _context.SaveChanges();
+            return await _courseRepository.DeleteAsync(id);
         }
     }
 }
