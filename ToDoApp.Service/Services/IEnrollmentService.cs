@@ -4,7 +4,7 @@ using ToDoApp.Application.Dtos.CourseModel;
 using ToDoApp.Application.Dtos.EnrollmentModel;
 using ToDoApp.Application.Dtos.StudentModel;
 using ToDoApp.Application.Extentions;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.Infrastructures;
 
 namespace ToDoApp.Application.Services

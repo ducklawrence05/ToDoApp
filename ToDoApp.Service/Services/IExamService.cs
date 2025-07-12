@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using ToDoApp.Application.Dtos.ExamModel;
 using ToDoApp.Application.Dtos.ExamQuestionModel;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.Infrastructures;
 
 namespace ToDoApp.Application.Services

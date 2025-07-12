@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using ToDoApp.Application.Dtos.CourseModel;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 
 namespace ToDoApp.Application.MapperProfiles
 {

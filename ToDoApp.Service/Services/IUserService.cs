@@ -9,7 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using ToDoApp.Application.Dtos.UserModel;
 using ToDoApp.Application.Helpers;
 using ToDoApp.Domains.AppSettingsConfigurations;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.Infrastructures;
 using ToDoApp.Constant;
 

@@ -1,6 +1,6 @@
-﻿using ToDoApp.Domains.Interface;
+﻿using ToDoApp.DataAccess.Interface;
 
-namespace ToDoApp.Domains.Entities
+namespace ToDoApp.DataAccess.Entities
 {
     public class StudentExam : ICreatedAt
     {

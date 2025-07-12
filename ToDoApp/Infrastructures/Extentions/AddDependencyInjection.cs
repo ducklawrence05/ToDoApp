@@ -4,6 +4,8 @@ using ToDoApp.Application.Services.CacheService;
 using ToDoApp.Application.Services;
 using ToDoApp.Application.Services.GoogleCredentialService;
 using ToDoApp.DataAccess.Repositories;
+using ToDoApp.DataAccess.Entities;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace ToDoApp.Infrastructures.Extentions
 {
@@ -13,6 +15,15 @@ namespace ToDoApp.Infrastructures.Extentions
         {
             serviceCollection.AddScoped<ICourseRepository, CourseRepository>();
             serviceCollection.AddScoped<IStudentRepository, StudentRepository>();
+            serviceCollection.AddScoped<ISchoolRepository, SchoolRepository>();
+            serviceCollection.AddScoped<IGenericRepository<Student>, GenericRepository<Student>>();
+
+            serviceCollection.AddScoped<IGenericRepository<Student>>(serviceProvider =>
+                new CachedRepository<Student>(
+                    serviceProvider.GetRequiredService<IGenericRepository<Student>>(),
+                    serviceProvider.GetRequiredService<IMemoryCache>()    
+                )
+            );
 
             serviceCollection.AddScoped<IToDoService, ToDoService>();
             serviceCollection.AddTransient<IGuidGenerator, GuidGenerator>();

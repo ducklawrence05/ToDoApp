@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using ToDoApp.Domains.Interface;
+using ToDoApp.DataAccess.Interface;
 
-namespace ToDoApp.Domains.Entities
+namespace ToDoApp.DataAccess.Entities
 {
-    public class School : IUpdatedBy, IUpdatedAt
+    public class School : IEntity, IUpdatedBy, IUpdatedAt
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -1,6 +1,6 @@
 ﻿using ToDoApp.Constant;
 
-namespace ToDoApp.Domains.Entities
+namespace ToDoApp.DataAccess.Entities
 {
     public class User
     {

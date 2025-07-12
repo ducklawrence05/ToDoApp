@@ -4,12 +4,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 
 namespace ToDoApp.DataAccess.Repositories
 {
-    public interface IStudentRepository
+    public interface IStudentRepository : IGenericRepository<Student>
     {
-        Task<IEnumerable<Student>> GetStudentsAsync(Expression<Func<Student, object>>? include);
     }
 }

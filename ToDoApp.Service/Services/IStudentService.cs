@@ -7,8 +7,8 @@ using Microsoft.IdentityModel.Tokens;
 using ToDoApp.Application.Dtos.CourseModel;
 using ToDoApp.Application.Dtos.StudentModel;
 using ToDoApp.Application.Extentions;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.DataAccess.Repositories;
-using ToDoApp.Domains.Entities;
 using ToDoApp.Infrastructures;
 
 namespace ToDoApp.Application.Services
@@ -27,11 +27,11 @@ namespace ToDoApp.Application.Services
 
         Task<IEnumerable<StudentViewModel>> GetStudentsAsync();
 
-        int PostStudent(StudentCreateModel student);
+        Task<int> PostAsync(StudentCreateModel student);
 
-        int PutStudent(StudentUpdateModel student);
+        Task<int> PutAsync(StudentUpdateModel student);
 
-        void DeleteStudent(int studentId);
+        Task<int> DeleteAsync(int studentId);
     }
 
     public class StudentService : IStudentService
@@ -41,14 +41,17 @@ namespace ToDoApp.Application.Services
         private readonly IMapper _mapper;
         private readonly IMemoryCache _cache;
         private readonly IStudentRepository _studentRepository;
+        private readonly ISchoolRepository _schoolRepository;
 
         public StudentService(IApplicationDBContext context, 
-            IMapper mapper, IMemoryCache cache, IStudentRepository studentRepository)
+            IMapper mapper, IMemoryCache cache, IStudentRepository studentRepository,
+            ISchoolRepository schoolRepository)
         {
             _context = context;
             _mapper = mapper;
             _cache = cache;
             _studentRepository = studentRepository;
+            _schoolRepository = schoolRepository;
         }
 
         public StudentCourseViewModel GetStudentDetail(int id)
@@ -149,16 +152,23 @@ namespace ToDoApp.Application.Services
 
         private async Task<IEnumerable<StudentViewModel>> GetAllStudentsAsync()
         {
-            var student = await _studentRepository.GetStudentsAsync(s => s.School);
+            var student = await _studentRepository.GetAllAsync(s => s.School);
             var result = _mapper.Map<List<StudentViewModel>>(student);
             return result;
         }
 
-        public int PostStudent(StudentCreateModel student)
+        public async Task<int> PostAsync(StudentCreateModel student)
         {
-            if(student == null || _context.Students.Any(x =>  x.Id == student.Id))
+            var dupId = await _studentRepository.GetByIdAsync(student.Id);
+            if(dupId != null)
             {
-                return -1;
+                throw new InvalidOperationException("Student ID already exists");
+            }
+
+            var school = _schoolRepository.GetSchoolByNameAsync(student.SchoolName);
+            if (school == null)
+            {
+                throw new InvalidOperationException("School name not found");
             }
 
             var data = new Student
@@ -168,21 +178,23 @@ namespace ToDoApp.Application.Services
                 LastName = student.LastName,
                 Address1 = student.Address1,
                 DateOfBirth = student.DateOfBirth,
-                SId = student.SId,
+                SId = school.Id,
             };
 
-            _context.Students.Add(data);
-            _context.SaveChanges();
+            await _studentRepository.AddAsync(data);
 
             return data.Id;
         }
 
-        public int PutStudent(StudentUpdateModel student)
+        public async Task<int> PutAsync(StudentUpdateModel student)
         {
-            var data = _context.Students.Find(student.Id);
-            if (data == null) return -1;
+            var data = await _studentRepository.GetByIdAsync(student.Id);
+            if (data == null)
+            {
+                throw new InvalidOperationException("Student not found");
+            }
 
-            if(!string.IsNullOrWhiteSpace(student.FirstName)) data.FirstName = student.FirstName;
+            if (!string.IsNullOrWhiteSpace(student.FirstName)) data.FirstName = student.FirstName;
             if(!string.IsNullOrWhiteSpace(student.LastName)) data.LastName = student.LastName;
             if(student.DateOfBirth.HasValue) data.DateOfBirth = student.DateOfBirth.Value;
             if(!string.IsNullOrWhiteSpace(student.Address1)) data.Address1 = student.Address1;
@@ -190,20 +202,23 @@ namespace ToDoApp.Application.Services
 
             data.Balance = student.Balance;
 
-            _context.SaveChanges();
+            await _studentRepository.UpdateAsync(data);
 
-            _cache.Remove(STUDENT_KEY);
+            //_cache.Remove(STUDENT_KEY);
 
             return data.Id;
         }
 
-        public void DeleteStudent(int studentId)
+        public async Task<int> DeleteAsync(int studentId)
         {
-            var data = _context.Students.Find(studentId);
-            if (data == null) return;
+            var data = await _studentRepository.GetByIdAsync(studentId);
+            if (data == null) {
+                throw new InvalidOperationException("Student not found");
+            }
 
             _context.Students.Remove(data);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
+            return data.Id;
         }
     }
 }

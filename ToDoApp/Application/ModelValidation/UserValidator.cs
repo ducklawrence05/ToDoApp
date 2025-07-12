@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using ToDoApp.Application.Dtos.UserModel;
-using ToDoApp.Domains.Entities;
 
 namespace ToDoApp.Application.ModelValidation
 {

@@ -8,7 +8,7 @@ using ToDoApp.Application.Dtos.StudentExamAnswerModel;
 using ToDoApp.Application.Dtos.StudentExamModel;
 using ToDoApp.Application.Dtos.StudentModel;
 using ToDoApp.Application.Dtos.UserModel;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 
 namespace ToDoApp.Application.MapperProfiles
 {

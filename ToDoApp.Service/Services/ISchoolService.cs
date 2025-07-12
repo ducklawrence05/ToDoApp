@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using ToDoApp.Application.Dtos.SchoolModel;
 using ToDoApp.Application.Dtos.StudentModel;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.Infrastructures;
 
 namespace ToDoApp.Application.Services

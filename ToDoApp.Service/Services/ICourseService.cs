@@ -4,8 +4,8 @@ using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 using ToDoApp.Application.Dtos;
 using ToDoApp.Application.Dtos.CourseModel;
 using ToDoApp.Application.Dtos.StudentModel;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.DataAccess.Repositories;
-using ToDoApp.Domains.Entities;
 using ToDoApp.Infrastructures;
 
 namespace ToDoApp.Application.Services
@@ -13,28 +13,26 @@ namespace ToDoApp.Application.Services
     public interface ICourseService
     {
         Task<IEnumerable<CourseViewModel>> GetCourses();
-        Task<int> PostCourse(CourseCreateModel course);
-        Task<int> PutCourse(CourseUpdateModel course);
-        Task<int> DeleteCourse(int id);
+        Task<int> PostCourseAsync(CourseCreateModel course);
+        Task<int> PutCourseAsync(CourseUpdateModel course);
+        Task<int> DeleteCourseAsync(int id);
     }
 
     public class CourseService : ICourseService
     {
-        private readonly IApplicationDBContext _context;
         private readonly IMapper _mapper;
         private readonly ICourseRepository _courseRepository;
 
-        public CourseService(IApplicationDBContext context, IMapper mapper,
+        public CourseService(IMapper mapper,
             ICourseRepository courseRepository)
         {
-            _context = context;
             _mapper = mapper;
             _courseRepository = courseRepository;
         }
 
         public async Task<IEnumerable<CourseViewModel>> GetCourses()
         {
-            var courses = await _courseRepository.GetCoursesAsync();
+            var courses = await _courseRepository.GetAllAsync();
 
             //cach 1
             //var courses = query.ToList();
@@ -47,11 +45,16 @@ namespace ToDoApp.Application.Services
             return _mapper.Map<List<CourseViewModel>>(courses);
         }
 
-        public async Task<int> PostCourse(CourseCreateModel course)
+        public async Task<int> PostCourseAsync(CourseCreateModel course)
         {
-            if(course == null || await _courseRepository.GetCourseByNameAsync(course.CourseName) != null)
+            if(course == null)
             {
-                return -1;
+                throw new InvalidOperationException("Course is null");
+            }
+
+            if (await _courseRepository.GetCourseByNameAsync(course.CourseName) != null)
+            {
+                throw new InvalidOperationException("Course name is existed");
             }
 
             var newCourse = _mapper.Map<Course>(course);
@@ -59,9 +62,9 @@ namespace ToDoApp.Application.Services
             return await _courseRepository.AddAsync(newCourse);
         }
 
-        public async Task<int> PutCourse(CourseUpdateModel course)
+        public async Task<int> PutCourseAsync(CourseUpdateModel course)
         {
-            var data = await _courseRepository.GetCourseByIdAsync(course.CourseId);
+            var data = await _courseRepository.GetByIdAsync(course.CourseId);
             
             if (data == null || data.DeletedBy.HasValue)
             {
@@ -85,8 +88,14 @@ namespace ToDoApp.Application.Services
             return data.Id;
         }
 
-        public async Task<int> DeleteCourse(int id)
+        public async Task<int> DeleteCourseAsync(int id)
         {
+            var existingCourse = _courseRepository.GetByIdAsync(id);
+            if (existingCourse == null)
+            {
+                throw new InvalidOperationException("CourseId not found");
+            }
+            
             return await _courseRepository.DeleteAsync(id);
         }
     }

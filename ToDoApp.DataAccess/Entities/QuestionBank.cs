@@ -1,4 +1,6 @@
-﻿namespace ToDoApp.Domains.Entities
+﻿using ToDoApp.DataAccess.Entities;
+
+namespace ToDoApp.DataAccess.Entities
 {
     public class QuestionBank
     {

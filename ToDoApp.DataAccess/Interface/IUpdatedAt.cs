@@ -1,4 +1,4 @@
-﻿namespace ToDoApp.Domains.Interface
+﻿namespace ToDoApp.DataAccess.Interface
 {
     public interface IUpdatedAt
     {

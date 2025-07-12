@@ -43,25 +43,41 @@ namespace ToDoApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostStudent(StudentCreateModel student)
+        public async Task<IActionResult> PostStudent([FromBody] StudentCreateModel student)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            return Ok(_studentService.PostStudent(student));
+
+            var result = await _studentService.PostAsync(student);
+            return Ok(result);
         }
 
         [HttpPut]
-        public int PutStudent(StudentUpdateModel student)
+        public async Task<IActionResult> PutStudent([FromBody] StudentUpdateModel student)
         {
-            return _studentService.PutStudent(student);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var result = await _studentService.PutAsync(student);
+            return Ok(result);
         }
 
-        [HttpDelete]
-        public void DeleteStudent(int studentId)
+        [HttpDelete("{studentId}")]
+        public async Task<IActionResult> DeleteStudent(int studentId)
         {
-            _studentService.DeleteStudent(studentId);
+            var success = await _studentService.DeleteAsync(studentId);
+
+            if (success == -1)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
         }
+
     }
 }

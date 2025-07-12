@@ -7,8 +7,8 @@ using ToDoApp.DataAccess.Entities;
 
 namespace ToDoApp.DataAccess.Repositories
 {
-    public interface ICourseRepository : IGenericRepository<Course>
+    public interface ISchoolRepository : IGenericRepository<School>
     {
-        Task<Course?> GetCourseByNameAsync(string courseName);
+        Task<School?> GetSchoolByNameAsync(string schoolName);
     }
 }

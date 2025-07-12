@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using ToDoApp.Domains.Interface;
+using ToDoApp.DataAccess.Interface;
 
 namespace ToDoApp.Infrastructures.Interceptors
 {

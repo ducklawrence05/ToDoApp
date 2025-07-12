@@ -6,7 +6,6 @@ using ToDoApp.Application.ActionFilters;
 using Microsoft.AspNetCore.Authorization;
 using OfficeOpenXml;
 using OfficeOpenXml.Table;
-using ToDoApp.Domains.Entities;
 using ToDoApp.Domains.AppSettingsConfigurations;
 using RazorLight;
 using Microsoft.Extensions.Options;

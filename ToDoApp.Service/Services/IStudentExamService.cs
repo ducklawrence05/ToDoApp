@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using ToDoApp.Application.Dtos.StudentExamAnswerModel;
 using ToDoApp.Application.Dtos.StudentExamModel;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.Infrastructures;
 
 namespace ToDoApp.Application.Services

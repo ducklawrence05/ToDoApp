@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using ToDoApp.Application.Dtos;
 using ToDoApp.Application.Dtos.ToDoModel;
 using ToDoApp.Application.Services;
-using ToDoApp.Domain.Entities;
 using ToDoApp.Infrastructures;
 
 namespace ToDoApp.Controllers

@@ -14,7 +14,7 @@ namespace ToDoApp.Application.Dtos.StudentModel
 
         public string Address1 { get; set; }
 
-        public int SId { get; set; }
+        public string SchoolName { get; set; }
         public List<string> Email { get; set; }
         public Address Address { get; set; }
     }

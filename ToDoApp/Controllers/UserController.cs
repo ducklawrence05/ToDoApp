@@ -9,7 +9,6 @@ using ToDoApp.Application.Dtos.UserModel;
 using ToDoApp.Application.Helpers;
 using ToDoApp.Application.Services;
 using ToDoApp.Application.Services.GoogleCredentialService;
-using ToDoApp.Domains.Entities;
 
 namespace ToDoApp.Controllers
 {

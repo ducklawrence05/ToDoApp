@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ToDoApp.DataAccess.Entities;
 
-namespace ToDoApp.Domains.Entities
+namespace ToDoApp.DataAccess.Entities
 {
-    public class Student
+    public class Student : IEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)] //tắt tự tăng id

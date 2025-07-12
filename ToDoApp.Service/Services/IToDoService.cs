@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ToDoApp.Application.Dtos.ToDoModel;
-using ToDoApp.Domain.Entities;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.Infrastructures;
 
 namespace ToDoApp.Application.Services

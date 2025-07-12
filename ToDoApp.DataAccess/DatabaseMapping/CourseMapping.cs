@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 
 namespace ToDoApp.Infrastructures.DatabaseMapping
 {

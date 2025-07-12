@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using ToDoApp.Domain.Entities;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 
 namespace ToDoApp.Infrastructures
 {
@@ -20,6 +19,7 @@ namespace ToDoApp.Infrastructures
         public DbSet<AuditLog> AuditLogs { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<T> Set<T>() where T : class, IEntity;
 
         public EntityEntry<T> Entry<T>(T entity) where T : class;
         public int SaveChanges();

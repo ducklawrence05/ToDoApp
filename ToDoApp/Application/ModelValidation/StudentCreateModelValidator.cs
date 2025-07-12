@@ -28,9 +28,9 @@ namespace ToDoApp.Application.ModelValidation
                 .NotEmpty()
                 .WithMessage("LastName is required");
 
-            RuleFor(x => x.SId)
-                .InclusiveBetween(1, 100)
-                .WithMessage("SId must be between 1 and 100.");
+            RuleFor(x => x.SchoolName)
+                .NotEmpty()
+                .WithMessage("School name is required");
 
             RuleForEach(x => x.Email)
                 .EmailAddress()

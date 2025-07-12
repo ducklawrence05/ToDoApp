@@ -25,21 +25,21 @@ namespace ToDoApp.Controllers
         }
 
         [HttpPost]
-        public async Task<int> PostCourse(CourseCreateModel course)
+        public async Task<int> PostCourseAsync(CourseCreateModel course)
         {
-            return await _courseService.PostCourse(course);
+            return await _courseService.PostCourseAsync(course);
         }
 
         [HttpPut]
-        public async Task<int> PutCourse(CourseUpdateModel course)
+        public async Task<int> PutCourseAsync(CourseUpdateModel course)
         {
-            return await _courseService.PutCourse(course);
+            return await _courseService.PutCourseAsync(course);
         }
 
         [HttpDelete]
-        public async Task<int> DeleteCourse(int courseId)
+        public async Task<int> DeleteCourseAsync(int courseId)
         {
-            return await _courseService.DeleteCourse(courseId);
+            return await _courseService.DeleteCourseAsync(courseId);
         }
     }
 }

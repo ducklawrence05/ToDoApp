@@ -1,8 +1,7 @@
 ﻿using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using ToDoApp.Domain.Entities;
-using ToDoApp.Domains.Entities;
+using ToDoApp.DataAccess.Entities;
 using ToDoApp.Infrastructures.DatabaseMapping;
 using ToDoApp.Infrastructures.Interceptors;
 
@@ -27,6 +26,7 @@ namespace ToDoApp.Infrastructures
         public DbSet<AuditLog> AuditLogs { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<T> Set<T>() where T : class, IEntity => base.Set<T>();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

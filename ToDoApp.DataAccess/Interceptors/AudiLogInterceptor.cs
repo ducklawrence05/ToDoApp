@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using ToDoApp.Domains.Entities;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using ToDoApp.DataAccess.Entities;
 
 namespace ToDoApp.Infrastructures.Interceptors
 {
