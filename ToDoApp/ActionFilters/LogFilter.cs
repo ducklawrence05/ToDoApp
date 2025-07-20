@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 
-namespace ToDoApp.Application.ActionFilters
+namespace ToDoApp.ActionFilters
 {
     public class LogFilter : IExceptionFilter
     {

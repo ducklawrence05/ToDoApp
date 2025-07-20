@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Caching.Memory;
 using ToDoApp.Application.Services.CacheService;
 
-namespace ToDoApp.Application.ActionFilters
+namespace ToDoApp.ActionFilters
 {
     public class CacheFilter : ActionFilterAttribute
     {

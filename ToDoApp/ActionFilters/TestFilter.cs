@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace ToDoApp.Application.ActionFilters
+namespace ToDoApp.ActionFilters
 {
     public class TestFilter : IActionFilter, IResultFilter
     {

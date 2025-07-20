@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using ToDoApp.Application.Dtos.UserModel;
 
-namespace ToDoApp.Application.ModelValidation
+namespace ToDoApp.ModelValidation
 {
     public class UserValidator : AbstractValidator<UserRegisterModel>
     {

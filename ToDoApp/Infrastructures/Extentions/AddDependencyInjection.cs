@@ -1,11 +1,12 @@
 ﻿using ToDoApp.Application.Dtos;
-using ToDoApp.Application.Middlewares;
 using ToDoApp.Application.Services.CacheService;
 using ToDoApp.Application.Services;
 using ToDoApp.Application.Services.GoogleCredentialService;
 using ToDoApp.DataAccess.Repositories;
 using ToDoApp.DataAccess.Entities;
 using Microsoft.Extensions.Caching.Memory;
+using ToDoApp.Middlewares;
+using ToDoApp.Service.Services;
 
 namespace ToDoApp.Infrastructures.Extentions
 {

@@ -2,7 +2,7 @@
 using ToDoApp.Application.Services;
 using Microsoft.EntityFrameworkCore.Storage;
 using ToDoApp.Application.Dtos.SchoolModel;
-using ToDoApp.Application.ActionFilters;
+using ToDoApp.ActionFilters;
 using Microsoft.AspNetCore.Authorization;
 using OfficeOpenXml;
 using OfficeOpenXml.Table;

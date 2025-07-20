@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using ToDoApp.Constant;
 
-namespace ToDoApp.Application.ActionFilters
+namespace ToDoApp.ActionFilters
 {
     public class AuthorizationFilter : ActionFilterAttribute, IAuthorizationFilter
     {
@@ -16,13 +16,13 @@ namespace ToDoApp.Application.ActionFilters
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             var userId = context.HttpContext.Session.GetInt32("UserId");
-            
+
             if (userId == null)
             {
                 context.Result = new UnauthorizedResult();
                 return;
             }
-            
+
             var role = context.HttpContext.Session.GetString("Role");
 
             var allowedRoles = _allowedRoles.Split(',');

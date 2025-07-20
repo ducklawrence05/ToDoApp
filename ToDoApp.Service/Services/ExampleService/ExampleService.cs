@@ -9,10 +9,16 @@ namespace ToDoApp.Service.Services.ExampleService
 {
     public class ExampleService
     {
+        // Virtual để mock trong test
+        protected virtual DateTime GetCurrentTime()
+        {
+            return DateTime.Now;
+        }
+
         public string CreateCourseWithCurrentTime(string courseName)
         {
-            // DateTime.Now is static and cannot be mocked
-            var currentTime = DateTime.Now;
+            var currentTime = GetCurrentTime();
+
             var course = new Course
             {
                 Name = courseName,

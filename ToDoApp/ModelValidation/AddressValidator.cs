@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace ToDoApp.Application.ModelValidation
+namespace ToDoApp.ModelValidation
 {
     public class AddressValidator : AbstractValidator<Address>
     {

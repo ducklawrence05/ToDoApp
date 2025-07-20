@@ -7,7 +7,7 @@ namespace ToDoApp.DataAccess.Entities
     public class Student : IEntity
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)] //tắt tự tăng id
+        // [DatabaseGenerated(DatabaseGeneratedOption.None)] //tắt tự tăng id
         public int Id { get; set; }
 
         [MaxLength(255)] //dùng đc cho cả string và các loại khác (ví dụ: byte[])

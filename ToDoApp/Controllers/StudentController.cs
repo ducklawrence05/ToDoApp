@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ToDoApp.Application.Dtos.StudentModel;
-using ToDoApp.Application.Services;
+using ToDoApp.Service.Services;
 
 namespace ToDoApp.Controllers
 {
@@ -27,19 +27,19 @@ namespace ToDoApp.Controllers
             return _studentService.GetStudentAverageScore(id);
         }
 
-        //[HttpGet]
-        //public IEnumerable<StudentViewModel> GetStudents(
-        //    string? searchProperty, string? searchValue,
-        //    string? sortBy, bool isAscending,
-        //    int pageIndex, int pageSize
-        //)
-        //{
-        //    return _studentService.GetStudents(searchProperty, searchValue, sortBy, isAscending, pageIndex, pageSize);
-        //}
-
         [HttpGet]
-        public async Task<IEnumerable<StudentViewModel>> GetStudents(){
-            return await _studentService.GetStudentsAsync();
+        public async Task<IEnumerable<StudentViewModel>> GetStudentsAsync(
+            string? searchProperty, string? searchValue,
+            string? sortBy, bool isAscending,
+            int pageIndex, int pageSize
+        )
+        {
+            return await _studentService.GetStudentsAsync(searchProperty, searchValue, sortBy, isAscending, pageIndex, pageSize);
+        }
+
+        [HttpGet("all")]
+        public async Task<IEnumerable<StudentViewModel>> GetAllStudentsAsync(){
+            return await _studentService.GetAllStudentsAsync();
         }
 
         [HttpPost]

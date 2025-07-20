@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ToDoApp.Application.ActionFilters;
+using ToDoApp.ActionFilters;
 using ToDoApp.Application.Dtos.CourseModel;
 using ToDoApp.Application.Services;
 

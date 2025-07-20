@@ -2,7 +2,7 @@
 using ToDoApp.Application.Dtos.CourseModel;
 using ToDoApp.DataAccess.Entities;
 
-namespace ToDoApp.Application.MapperProfiles
+namespace ToDoApp.Service.MapperProfiles
 {
     public class CourseProfile : Profile
     {

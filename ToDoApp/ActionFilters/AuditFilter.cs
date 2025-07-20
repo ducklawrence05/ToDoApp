@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace ToDoApp.Application.ActionFilters
+namespace ToDoApp.ActionFilters
 {
     public class AuditFilter : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
             var request = context.HttpContext.Request;
-            
+
             var method = request.Method;
 
             var path = request.Path;

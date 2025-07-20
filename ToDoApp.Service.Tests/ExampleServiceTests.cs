@@ -10,20 +10,21 @@ namespace ToDoApp.Service.Tests
     public class ExampleServiceTests
     {
         [Fact]
-        public async Task CreateCourseWithCurrentTime_ShouldReturnCorrectMessage()
+        public void CreateCourseWithCurrentTime_ShouldReturnCorrectMessage()
         {
             // Arrange
-            var exampleService = new ExampleService();
-
             var courseName = "Test Course Name";
+            var fixedTime = new DateTime(2025, 7, 19, 20, 0, 0); // Giả lập thời gian cố định
 
-            var currentTime = DateTime.Now;
+            var service = new TestableExampleService(fixedTime);
+
+            var expectedMessage = $"Course '{courseName}' created at {fixedTime:yyyy-MM-dd HH:mm:ss:fffffff}";
 
             // Act
-            var result = exampleService.CreateCourseWithCurrentTime(courseName);
+            var result = service.CreateCourseWithCurrentTime(courseName);
 
             // Assert
-            Assert.Equal($"Course '{courseName}' created at {currentTime:yyyy-MM-dd HH:mm:ss:fffffff}", result);
+            Assert.Equal(expectedMessage, result);
         }
     }
 }

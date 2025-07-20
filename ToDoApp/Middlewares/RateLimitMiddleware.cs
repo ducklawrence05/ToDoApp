@@ -1,7 +1,7 @@
 ﻿
 using System.Diagnostics;
 
-namespace ToDoApp.Application.Middlewares
+namespace ToDoApp.Middlewares
 {
     // trong 30s, he thong chi cho phep 10 request
     public class RateLimitMiddleware : IMiddleware
@@ -17,7 +17,7 @@ namespace ToDoApp.Application.Middlewares
 
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
-            if(_stopwatch.ElapsedMilliseconds >= 30000)
+            if (_stopwatch.ElapsedMilliseconds >= 30000)
             {
                 _stopwatch.Restart();
                 _limit = 0;

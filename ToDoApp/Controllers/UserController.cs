@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using ToDoApp.Application.ActionFilters;
+using ToDoApp.ActionFilters;
 using ToDoApp.Application.Dtos.UserModel;
 using ToDoApp.Application.Helpers;
 using ToDoApp.Application.Services;

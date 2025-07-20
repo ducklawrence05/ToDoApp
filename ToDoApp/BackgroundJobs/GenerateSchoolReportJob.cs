@@ -4,7 +4,7 @@ using ToDoApp.Application.Dtos.SchoolModel;
 using ToDoApp.Application.Services;
 using ToDoApp.Domains.AppSettingsConfigurations;
 
-namespace ToDoApp.Application.BackgroundJobs
+namespace ToDoApp.BackgroundJobs
 {
     public class GenerateSchoolReportJob
     {
@@ -41,7 +41,7 @@ namespace ToDoApp.Application.BackgroundJobs
 
             var pdf = await renderEngine.RenderHtmlAsPdfAsync(htmlText);
 
-            var path = Path.Combine(_fileInformation.RootDirectory, 
+            var path = Path.Combine(_fileInformation.RootDirectory,
                 $"SchoolReport-{DateTime.Now.ToString("dd-MM-yyyy_hh-mm-ss")}.pdf");
             pdf.SaveAs(path);
         }

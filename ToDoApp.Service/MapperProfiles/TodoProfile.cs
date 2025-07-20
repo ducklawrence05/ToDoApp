@@ -10,7 +10,7 @@ using ToDoApp.Application.Dtos.StudentModel;
 using ToDoApp.Application.Dtos.UserModel;
 using ToDoApp.DataAccess.Entities;
 
-namespace ToDoApp.Application.MapperProfiles
+namespace ToDoApp.Service.MapperProfiles
 {
     public class TodoProfile : Profile
     {

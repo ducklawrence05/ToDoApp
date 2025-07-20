@@ -11,7 +11,7 @@ using ToDoApp.DataAccess.Entities;
 using ToDoApp.DataAccess.Repositories;
 using ToDoApp.Infrastructures;
 
-namespace ToDoApp.Application.Services
+namespace ToDoApp.Service.Services
 {
     public interface IStudentService
     {
@@ -19,13 +19,13 @@ namespace ToDoApp.Application.Services
 
         StudentAverageScoreViewModel GetStudentAverageScore(int id);
 
-        IEnumerable<StudentViewModel> GetStudents(
+        Task<IEnumerable<StudentViewModel>> GetStudentsAsync(
             string? searchProperty, string? searchValue,
             string? sortBy, bool isAscending,
             int pageIndex, int pageSize
         );
 
-        Task<IEnumerable<StudentViewModel>> GetStudentsAsync();
+        Task<IEnumerable<StudentViewModel>> GetAllStudentsAsync();
 
         Task<int> PostAsync(StudentCreateModel student);
 
@@ -39,17 +39,16 @@ namespace ToDoApp.Application.Services
         private const string STUDENT_KEY = "StudentKey";
         private readonly IApplicationDBContext _context;
         private readonly IMapper _mapper;
-        private readonly IMemoryCache _cache;
         private readonly IStudentRepository _studentRepository;
         private readonly ISchoolRepository _schoolRepository;
 
-        public StudentService(IApplicationDBContext context, 
-            IMapper mapper, IMemoryCache cache, IStudentRepository studentRepository,
+        public StudentService(IApplicationDBContext context,
+            IMapper mapper, 
+            IStudentRepository studentRepository,
             ISchoolRepository schoolRepository)
         {
             _context = context;
             _mapper = mapper;
-            _cache = cache;
             _studentRepository = studentRepository;
             _schoolRepository = schoolRepository;
         }
@@ -110,7 +109,7 @@ namespace ToDoApp.Application.Services
         }
 
         // IQueryable: thể hiện 1 câu query
-        public IEnumerable<StudentViewModel> GetStudents(
+        public async Task<IEnumerable<StudentViewModel>> GetStudentsAsync(
             string? searchProperty, string? searchValue,
             string? sortBy, bool isAscending,
             int pageIndex, int pageSize
@@ -122,12 +121,12 @@ namespace ToDoApp.Application.Services
 
             query = query.ApplyQuery(searchProperty, searchValue, sortBy, isAscending, pageIndex, pageSize);
 
-            var result = _mapper.ProjectTo<StudentViewModel>(query).ToList();
+            var result = await _mapper.ProjectTo<StudentViewModel>(query).ToListAsync();
 
             return result;
         }
 
-        public async Task<IEnumerable<StudentViewModel>> GetStudentsAsync()
+        public async Task<IEnumerable<StudentViewModel>> GetAllStudentsAsync()
         {
             //var data = _cache.Get<IEnumerable<StudentViewModel>>(STUDENT_KEY);
 
@@ -141,16 +140,18 @@ namespace ToDoApp.Application.Services
             //    _cache.Set(STUDENT_KEY, data, cacheOption);
             //}
 
-            var data = await _cache.GetOrCreate(STUDENT_KEY, async entry =>
-            {
-                entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30);
-                return await GetAllStudentsAsync();
-            });
+            //var data = await _cache.GetOrCreate(STUDENT_KEY, async entry =>
+            //{
+            //    entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30);
+            //    return await GetAllStudentsAsync();
+            //});
+
+            var data = await GetAllStudentsAsyncHelper();
 
             return data;
         }
 
-        private async Task<IEnumerable<StudentViewModel>> GetAllStudentsAsync()
+        private async Task<IEnumerable<StudentViewModel>> GetAllStudentsAsyncHelper()
         {
             var student = await _studentRepository.GetAllAsync(s => s.School);
             var result = _mapper.Map<List<StudentViewModel>>(student);
@@ -160,7 +161,7 @@ namespace ToDoApp.Application.Services
         public async Task<int> PostAsync(StudentCreateModel student)
         {
             var dupId = await _studentRepository.GetByIdAsync(student.Id);
-            if(dupId != null)
+            if (dupId != null)
             {
                 throw new InvalidOperationException("Student ID already exists");
             }
@@ -195,9 +196,9 @@ namespace ToDoApp.Application.Services
             }
 
             if (!string.IsNullOrWhiteSpace(student.FirstName)) data.FirstName = student.FirstName;
-            if(!string.IsNullOrWhiteSpace(student.LastName)) data.LastName = student.LastName;
-            if(student.DateOfBirth.HasValue) data.DateOfBirth = student.DateOfBirth.Value;
-            if(!string.IsNullOrWhiteSpace(student.Address1)) data.Address1 = student.Address1;
+            if (!string.IsNullOrWhiteSpace(student.LastName)) data.LastName = student.LastName;
+            if (student.DateOfBirth.HasValue) data.DateOfBirth = student.DateOfBirth.Value;
+            if (!string.IsNullOrWhiteSpace(student.Address1)) data.Address1 = student.Address1;
             if (student.SId.HasValue) data.SId = student.SId.Value;
 
             data.Balance = student.Balance;
@@ -212,7 +213,8 @@ namespace ToDoApp.Application.Services
         public async Task<int> DeleteAsync(int studentId)
         {
             var data = await _studentRepository.GetByIdAsync(studentId);
-            if (data == null) {
+            if (data == null)
+            {
                 throw new InvalidOperationException("Student not found");
             }
 

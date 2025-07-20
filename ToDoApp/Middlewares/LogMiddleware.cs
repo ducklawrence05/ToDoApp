@@ -1,5 +1,4 @@
-﻿
-namespace ToDoApp.Application.Middlewares
+﻿namespace ToDoApp.Middlewares
 {
     public class LogMiddleware : IMiddleware
     {

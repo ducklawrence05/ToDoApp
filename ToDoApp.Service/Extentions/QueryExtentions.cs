@@ -4,7 +4,7 @@ namespace ToDoApp.Application.Extentions
 {
     public static class QueryExtentions
     {
-        public static IQueryable<T> Search<T>(this IQueryable<T> query, string searchProperty, string searchValue) where T : class
+        public static IQueryable<T> Search<T>(this IQueryable<T> query, string? searchProperty, string? searchValue) where T : class
         {
             if (string.IsNullOrEmpty(searchProperty) || string.IsNullOrEmpty(searchValue))
             {
@@ -48,7 +48,7 @@ namespace ToDoApp.Application.Extentions
             return query;
         }
 
-        public static IQueryable<T> Sort<T>(this IQueryable<T> query, string sortBy, bool isAscending) where T : class
+        public static IQueryable<T> Sort<T>(this IQueryable<T> query, string? sortBy, bool isAscending) where T : class
         {
             if (string.IsNullOrEmpty(sortBy))
             {

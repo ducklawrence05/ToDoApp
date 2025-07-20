@@ -2,7 +2,7 @@
 using ToDoApp.Application.Dtos.StudentModel;
 using ToDoApp.Infrastructures;
 
-namespace ToDoApp.Application.ModelValidation
+namespace ToDoApp.ModelValidation
 {
     public class StudentCreateModelValidator : AbstractValidator<StudentCreateModel>
     {
